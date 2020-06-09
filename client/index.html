@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="139184903230-en1prntd38fdfp9or0labbloapsbv0s8.apps.googleusercontent.com">
+    <link rel="icon" href="https://mustopa28121992.github.io/projectt/img/fox--md5--a9e377ae39495073d0e66db163fc8d9b.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Hack-Movies</title>
+</head>
+<body>
+    <section class="login-page">
+        <div class="login-page-container">
+            <div class="left-login">
+                <h1>Welcome to HackMovies</h1>
+                <div class="w-full max-w-xs form-body">
+                    <img class="hacktiv-login" src="https://mustopa28121992.github.io/projectt/img/fox--md5--a9e377ae39495073d0e66db163fc8d9b.png" alt="hacktiv">
+                    <form onsubmit="login(event)" class="login-form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                      <div class="mb-4">
+                        <label class="text block text-gray-700 text-sm font-bold mb-2" for="email">
+                          Email
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" required>
+                      </div>
+                      <div class="mb-2">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                          Password
+                        </label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" required>
+                      </div>
+                      <div class="google">
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                      </div>
+                      <div class="flex items-center">
+                        <button type="submit" class="login-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                          Sign In
+                        </button>
+                      </div>
+                    </form>
+                    <p class="text-center text-gray-500 text-xs" style="color:white">
+                      &copy;2020 Hacktiv8 - Arnold Therigan
+                    </p>
+                  </div>
+            </div>
+            <div class="right-login">
+                <img class="hacktiv-one" src="images/hacktiv-bando.png" alt="hacktiv">
+                <img class="hacktiv-two" src="images/hacktiv-bando.png" alt="hacktiv">
+                <img class="login-img" src="images/login.svg" alt="login">
+            </div>
+        </div>
+        <div class="bg-wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e43f5a" fill-opacity="1" d="M0,32L26.7,42.7C53.3,53,107,75,160,90.7C213.3,107,267,117,320,112C373.3,107,427,85,480,85.3C533.3,85,587,107,640,128C693.3,149,747,171,800,197.3C853.3,224,907,256,960,256C1013.3,256,1067,224,1120,192C1173.3,160,1227,128,1280,133.3C1333.3,139,1387,181,1413,202.7L1440,224L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+        </div>
+    </section>
+
+
+    <div class="main-container">
+        <header>
+            <nav class="navbar">
+                <div onclick="toHome()" class="nav-left">
+                    <i class="fas fa-ticket-alt logo"></i>
+                    <img class="hacktiv" src="https://mustopa28121992.github.io/projectt/img/fox--md5--a9e377ae39495073d0e66db163fc8d9b.png" alt="hacktiv">
+                </div>
+                <div class="nav-center">
+                    <p onclick="toAddForm()" class="doubleDashed">Add Movies</p>
+                </div>
+                <div class="nav-right">
+                    <button onclick="logout()" class="logout">Logout</button>
+                </div>
+            </nav>
+        </header>
+        <section class="home-page">
+            <div class="container-home">
+                <!-- <div class="max-w-sm card rounded overflow-hidden shadow-lg">
+                    <i class="fas fa-times delete"></i>
+                    <img class="w-full" src="https://cdn2.tstatic.net/wartakota/foto/bank/images2/money-heist-pk.jpg" alt="Sunset in the mountains">
+                    <div class="px-6 py-4">
+                      <div class="font-bold text-xl mb-2" style="text-align: center;">Money Heist</div>
+                    </div>
+                    <div class="px-6 py-4 card-footer">
+                      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#thriller</span>
+                      <div class="right-button">
+                          <button onclick="toEditForm()">Edit</button>
+                      </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section class="add-form-page">
+            <div class="container-add-form">
+                <div class="left-add-form">
+                    <h2>Add Your Favourite Movie</h2>
+                    <div class="w-full max-w-xs">
+                        <form onsubmit="addMovie(event)" class="bg-white add-form shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+                              Title
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="title">
+                          </div>
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="genre">
+                              Genre
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="genre" type="text" placeholder="genre">
+                          </div>
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="imageUrl">
+                              Image Url
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="imageUrl" type="text" placeholder="imageUrl">
+                          </div>
+                          <div>
+                            <button class="add-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                              Add
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+                <div class="right-add-form">
+                    <img src="images/add-page.svg" alt="create image">
+                </div>
+            </div>
+        </section>
+
+        <section class="update-form-page">
+            <div class="container-update-form">
+                <div class="left-add-form">
+                    <h2>Update Movie Data</h2>
+                    <div class="w-full max-w-xs">
+                        <form onsubmit="editMovie(event)" class="bg-white add-form shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+                              Title
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title-edit" type="text" placeholder="title">
+                          </div>
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="genre">
+                              Genre
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="genre-edit" type="text" placeholder="genre">
+                          </div>
+                          <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="imageUrl">
+                              Image Url
+                            </label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="imageUrl-edit" type="text" placeholder="imageUrl">
+                          </div>
+                          <div class="">
+                            <button class="add-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                              Edit
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+                <div class="right-add-form">
+                    <img src="images/edit.svg" alt="edit image">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
