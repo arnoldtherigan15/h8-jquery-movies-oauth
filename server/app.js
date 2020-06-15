@@ -3,8 +3,8 @@ const app = express()
 
 if(process.env.NODE_ENV == 'development') {
     require('dotenv').config()
-    const morgan = require('morgan')
-    app.use(morgan('dev'))
+    // const morgan = require('morgan')
+    // app.use(morgan('dev'))
 }
 
 const errorHandler = require('./middlewares/errorHandler')
